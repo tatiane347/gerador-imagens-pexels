@@ -37,7 +37,11 @@ O Gerador de Imagens Pexels oferece as seguintes funcionalidades de busca:
 # Adiciona todos os arquivos novos/modificados
 git add . 
 
-/home/tatiane/taty/Gerador De Imagens Free IA/assets/screenshot.png
+## 🖼️ Imagem do Site
+
+![Captura de tela do Gerador de Imagens Pexels](assets/screenshot.png)
+![Captura de tela do Gerador de Imagens Pexels](assets/screenshot2.png)
+
 
 ## 📞 Contato Profissional
 
