@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Imagens Pexels</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" type="image/png" href="icone.png">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Imagens Pexels</h1>
+        <p>Descreva a imagem que você quer buscar e veja a mágica acontecer!</p>
+        
+        <div class="input-area">
+            <input type="text" id="prompt-input" placeholder="Ex: um gato astronauta em marte">
+            
+            <select id="color-select">
+                <option value="">Qualquer Cor Principal</option>
+                <option value="red">Vermelho</option>
+                <option value="orange">Laranja</option>
+                <option value="yellow">Amarelo</option>
+                <option value="green">Verde</option>
+                <option value="turquoise">Turquesa</option>
+                <option value="blue">Azul</option>
+                <option value="violet">Violeta</option>
+                <option value="pink">Rosa</option>
+                <option value="brown">Marrom</option>
+                <option value="white">Branco</option>
+                <option value="gray">Cinza</option>
+                <option value="black">Preto</option>
+            </select>
+
+            <div class="orientation-group">
+                <label>Orientação:</label>
+                <input type="radio" id="orientation-all" name="orientation" value="" checked>
+                <label for="orientation-all">Todas</label>
+                
+                <input type="radio" id="orientation-landscape" name="orientation" value="landscape">
+                <label for="orientation-landscape">Horizontal</label>
+                
+                <input type="radio" id="orientation-portrait" name="orientation" value="portrait">
+                <label for="orientation-portrait">Vertical</label>
+                
+                <input type="radio" id="orientation-square" name="orientation" value="square">
+                <label for="orientation-square">Quadrada</label>
+            </div>
+
+            <button id="generate-btn">Buscar Imagem</button>
+        </div>
+        
+        <div class="image-area">
+            <div id="loading" class="hidden">Buscando imagem...</div>
+            <img id="generated-image" class="hidden" alt="Imagem gerada por IA">
+        </div>
+    </div>
+    
+    <footer>
+        Gerador de Imagens Pexels | Criado por Tatiane Nascimento
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/*
+ * Arquivo: style.css
+ * Tema: Limpo e Funcional para Gerador Pexels
+ */
+
+/* ------------------------------------------- */
+/* Estilos Globais e do Body (CORRIGIDO)       */
+/* ------------------------------------------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* CORREÇÃO PRINCIPAL: Garante que os elementos fiquem em coluna (Container, depois Footer) */
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 30px 0; /* Espaçamento no topo e base para o container */
+    color: #333;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+    text-align: center;
+    width: 95%;
+    max-width: 800px; 
+}
+
+/* Títulos e Parágrafos */
+h1 {
+    font-size: 2.8rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------------------- */
+/* Área de Input e Filtros                     */
+/* ------------------------------------------- */
+.input-area {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-bottom: 25px;
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+/* Campo de Texto (Prompt) */
+#prompt-input {
+    flex-grow: 1; 
+    min-width: 250px; 
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+#prompt-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Dropdown de Cores */
+#color-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 150px;
+    height: 42px; 
+}
+
+/* Botão Principal */
+#generate-btn {
+    height: 42px; 
+    padding: 0 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#generate-btn:hover {
+    background-color: #45a049;
+}
+
+#generate-btn:active {
+    transform: scale(0.98);
+}
+
+/* Grupo de Orientação (Radio Buttons) */
+.orientation-group {
+    flex-shrink: 0; 
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 9px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    height: 42px; 
+    line-height: 1; 
+}
+
+.orientation-group label:first-child {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* ------------------------------------------- */
+/* Área de Imagem e Loading                    */
+/* ------------------------------------------- */
+
+.image-area {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#loading {
+    font-size: 1.2rem;
+    color: #666;
+    animation: pulse 1.5s infinite;
+}
+
+#generated-image {
+    max-width: 100%;
+    max-height: 500px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* ------------------------------------------- */
+/* Rodapé (AJUSTADO)                           */
+/* ------------------------------------------- */
+footer {
+    width: 100%;
+    margin-top: 30px; 
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+    /* Adiciona a cor de fundo para garantir que não pareça transparente */
+    background-color: #f0f2f5; 
+}
+
+
+/* Mídia Query para telas menores */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .input-area {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #prompt-input, #color-select, #generate-btn {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .orientation-group {
+        justify-content: space-between;
+        height: auto;
+        flex-wrap: wrap;
+    }
+}
